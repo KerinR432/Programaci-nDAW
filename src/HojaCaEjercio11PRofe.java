@@ -1,7 +1,12 @@
+import java.util.Scanner;
+
 public class HojaCaEjercio11PRofe {
+    static Scanner scanner=new Scanner(System.in);
     public static void main(String[] args) {
         //ZDV
-        String email = "miMail@Dominio.com";
+        String email = "";
+        System.out.println("Introduce un Email");
+        email=scanner.nextLine();
         //AVERGUAR SI TIENE UNA ARROBA
         if (!contieneEspacio(email)) {
             if (contieneUnaArroba(email)) {
@@ -49,4 +54,5 @@ public class HojaCaEjercio11PRofe {
         }
         return false;
     }
+
 }

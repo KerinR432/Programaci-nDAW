@@ -1,6 +1,23 @@
 public class HojaCaEjercio11PRofe {
     public static void main(String[] args) {
+        //ZDV
+        String email = "miMail@Dominio.com";
+        //AVERGUAR SI TIENE UNA ARROBA
+        if (!contieneEspacio(email)) {
+            if (contieneUnaArroba(email)) {
+                if (!contieneDosPuntosSeguidos(email)) {
+                    System.out.println("Email Correcto!");
+                } else {
+                    System.out.println("Email incorrecto: Tiene 2 puntos seguidos.");
+                }
 
+            } else {
+                System.out.println("Email Incorrecto: contine mas de una arroba o ninguna");
+
+            }
+        }else{
+            System.out.println("Email Incorrecto: Contiene espacios!");
+        }
     }
 
     //1.1 FUNCIÓN CONTIENE UNA SOLA 1
@@ -17,12 +34,13 @@ public class HojaCaEjercio11PRofe {
         return false;
     }
 
-    //1.2 FUNCIÓN NO PUEDE TENER DOS PUNTOS SEGUIDO
+    //1.2 FUNCIÓN NO PUEDE TENER DOS PUNTOS SEGUIDO, supongo que solo tiene una arroba
     public static boolean contieneDosPuntosSeguidos(String email) {
-
+        String[] partesEmail = email.split("@");
+        return partesEmail[1].contains("..");
     }
 
-    //1.2 NO PUEDE TENER ESPACIO EN BLANCO
+    //1.3 NO PUEDE TENER ESPACIO EN BLANCO
     public static boolean contieneEspacio(String email) {
         for (int i = 0; i < email.length(); i++) {
             if (email.charAt(i) == ' ') {

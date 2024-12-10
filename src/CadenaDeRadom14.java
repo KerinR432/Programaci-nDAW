@@ -13,14 +13,10 @@ public class CadenaDeRadom14 {
     static Random random = new Random();
 
     public static void main(String[] args) {
-        generadorMelodias();
+        final String[] NOTAS= {"do", "re", "mi", "fa", "sol", "la","si"};
+        System.out.println(NOTAS[random.nextInt(7)]);
     }
 
-    public static void generadorMelodias() {
-        String[] notas = {"do, re, mi, fa, sol, la y si"};
-        notas = random.nextInt(7+1);
 
-
-    }
 }
 

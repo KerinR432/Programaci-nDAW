@@ -21,7 +21,7 @@ public class CadenasDeCaracteresEj12 {
         do {
             System.out.println("¿Que obsión quieres?.");
             System.out.println("1. Dar de alta un producto.\n" + "2.Buscar un producto\n" + "3. Modificar el Stock y precio de un producto.\n"
-            +"4.Salir");
+                    + "4.Salir");
             opción = scanner.nextInt();
             switch (opción) {
                 case 1:
@@ -59,16 +59,16 @@ public class CadenasDeCaracteresEj12 {
         System.out.println("Introduce el Nombre del prodcuto: ");
         nombreProducto = scanner.nextLine();
         nombreProducto = scanner.nextLine();
-        if (producto.equals(nombreProducto)==true) {
-            for (int i = 0; i < 10; i++) {
-                System.out.println(producto[i]);
-                System.out.println(precio[i]);
-                System.out.println(stock[i]);
+        for (int i = 0; i < nombreProducto.length(); i++) {
+            if (producto.equals(nombreProducto) == false) {
+                System.out.println("Este es el producto que buscabas: " + producto[i]);
+                System.out.println("Aqui tienes el precio: " + precio[i] + "€");
+                System.out.println("Aqui esta el stock son: " + stock[i] + " Unidades\n");
+            } else {
+                System.out.println("Error has introducido una mayuscula o minuscula mal o el producto no esta");
+                System.out.println("Introduce el Nombre del productos: ");
+                nombreProducto = scanner.nextLine();
             }
-        } else {
-            System.out.println("Error has introducido una mayuscula o minuscula mal o el producto no esta");
-            System.out.println("Introduce el Nombre del productos: ");
-            nombreProducto = scanner.nextLine();
         }
     }
 }
